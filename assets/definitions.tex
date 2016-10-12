@@ -1,0 +1,36 @@
+%----------------------------------------------------------------------------------------
+%	MATH MACROS
+%----------------------------------------------------------------------------------------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+%--
+\newcommand{\rk}{\text{Rang}}
+\newcommand{\kr}{\text{Kern}}
+\newcommand{\bild}{\text{Bild}}
+\newcommand{\im}{\text{Bild}}
+\newcommand{\cp}{\text{CP}}
+\newcommand{\spec}{\text{Spec}}
+\newcommand{\eig}{\text{Eig}}
+\newcommand{\jnf}{\text{JNF}}
+\newcommand{\hau}{\text{Hau}}
+\newcommand{\gl}{\text{GL}}
+\newcommand{\abb}{\text{Abb}}
+\renewcommand{\hom}{\text{Hom}}
+\newcommand{\iso}{\text{Iso}}
+\newcommand{\mi}{\text{i}}
+
+%----------------------------------------------------------------------------------------
+%	CHANGE MULTIPLICATION SYMBOL
+%----------------------------------------------------------------------------------------
+\mathcode`\*="8000
+{\catcode`\*\active\gdef*{\cdot}}
+
+
+%----------------------------------------------------------------------------------------
+%	MORE SQUEEZED LISTS
+%----------------------------------------------------------------------------------------
+\newenvironment{items}{\begin{itemize}[label={}]\setlength\itemsep{-0.2em}\setlength{\itemindent}{-.8em}}{\end{itemize}}
+\newenvironment{enumeration}{\begin{enumerate}\setlength\itemsep{-0.2em}\setlength{\itemindent}{-.8em}}{\end{enumerate}}

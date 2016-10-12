@@ -1,0 +1,48 @@
+\section{\label{sec:bilinearformen}Bilinearformen}
+
+\textbf{Bilineare Abbildung}:
+\begin{items}
+	\item \( = \beta: V \times W \to U \) (\( U,V,W \ K \)-VRe) mit
+	\begin{enumeration}
+		\item \( \forall v \in V: W \ni w \mapsto \beta(v,w) \in U \) linear
+		\item \( \forall w \in W: V \ni v \mapsto \beta(v,w) \in U \) linear
+	\end{enumeration}
+
+	\item \underline{Paarung}: = bilineare Abb. mit \( U=K \)
+		\\*
+		nicht ausgeartet \( \Leftrightarrow (\forall 0 \neq v \in V \exists w \in W: \beta(v,w) \neq 0 ) \\* \phantom{x} \wedge (\forall 0 \neq w \in W \exists v \in V: \beta(v,w) \neq 0 ) \)
+
+	\item \underline{Bilinearform}: = bilineare Abb. der Form \( \beta: V \times V \to W \)
+
+	\item \underline{BLF im Dualraum}: nicht ausgeartete Paarung der Form \\* \( \beta: V \times V^\ast \to K \) mit \( \beta(v, \lambda) \mapsto \lambda(v) \)
+
+	\item \underline{Zusammenhang Abb.}:
+		\begin{enumeration}
+		 	\item \( \varphi \in \abb(V,W^\ast) \\* \Rightarrow \beta_\varphi: V \times W \ni (v,w) \mapsto (\varphi(v))(w) \in K \) Paarung
+		 	\item \( \beta: V \times V^\ast (v, \lambda) \mapsto \lambda(v) \in K \) nicht ausgeartete Paarung
+		 \end{enumeration} 
+		 \( \leadsto \hom(V,W^\ast) \cong \{ \text{Paarungen auf } V \times W \} \)
+\end{items}
+
+\textbf{Fundamentalmatrix}:
+\begin{items}
+	\item \( \langle \{ b_1, \dots, b_n \} \rangle =: V \), \( \langle \{ c_1, \dots, c_n \} \rangle =: W \), \( \beta: V \times W \to U \) bilin.
+		\\*
+		\( \leadsto u_{i,j} := \beta(b_i, c_j) \)
+	\item \( U = K \Rightarrow D_{BC} := (u_{ij}) \in K^{n \times n} \) \\* \( \beta \)-\emph{Fundamentalmatrix} bezüglich \( B \) und \( C \)
+	\item \( v := \sum_{i=1}^nx_ib_i \), \( w := \sum_{j=1}^my_jc_j \): \( \underline{\beta(v,w) = \sum_{i=1}^n\sum_{j=1}^mx_iy_ju_{i,j}} \)
+	\item \( \Rightarrow \beta(v,w) = (x_1, \dots, x_n)^\top D_{BC}(\beta)(y_1, \dots, y_m) \) 
+		\\*
+		\( \leadsto \beta(v,w)=D_B(v)^\top D_{BC}(\beta)D_C(w) \) 
+\end{items}
+
+\textbf{Bilineare Fortsetzung}:
+\begin{items}
+	\item \( \forall (f_{i,j}) \in K^{n \times m} \exists \text{ Paarung } \beta(b_i, c_j) = f_{i,j}(i,j) \)
+		\\*
+		= bilineare Fortsetzung v. \( g: B \times C \ni (b_i,c_j) \mapsto f_{i,j} \in K \)
+
+	\item \( \beta: V \times W \to K \) nicht ausgeartet \( \Leftrightarrow D_{BC}(\beta) \) invertierbar \\*  (\( \leadsto \dim(V) = \dim(W) = \rk(D_{BC}(\beta)) \))
+\end{items}
+
+\newpage
