@@ -1,114 +1,112 @@
 \section{\label{sec:Skalarprodukte}Skalarprodukte}
 
-\textbf{Längen und Abstände}:
-\begin{items}
-	\item \underline{Skalarprodukt}: = BLF \( F: V \times V \to K \) mit
-		\begin{enumeration}
-			\item \textbf{symmetrisch}: \( F(x,y) = F(y,x) \)
-			\item \textbf{positiv definit}: \( x \neq 0 \Rightarrow F(x,x) > 0 \)
-		\end{enumeration}
-	\item \underline{Standard-SKP}: \( \langle \cdot, \cdot \rangle: \R^n \times \R^n \ni (x,y) \mapsto x^\top y \)
-	\item \underline{Euklidischer Standardraum}: \( = (\R^n, \langle \cdot, \cdot \rangle) \)
-	\item \underline{Norm}: \( = ||v|| = \sqrt{\langle v,v \rangle} \)
-	\item \underline{Abstand}: \( = \text{d}(v,w) = ||v-w|| \)
+\paragraph{Längen und Abstände}
+\begin{itemize}
+	\item \textbf{Skalarprodukt}: = BLF \( F: V \times V \to K \) mit
+		\begin{enumerate}
+			\item \emph{symmetrisch}: \( F(x,y) = F(y,x) \)
+			\item \emph{positiv definit}: \( x \neq 0 \Rightarrow F(x,x) > 0 \)
+		\end{enumerate}
+	\item \textbf{Standard-SKP}: \( \langle \cdot, \cdot \rangle: \R^n \times \R^n \ni (x,y) \mapsto x^\top y \)
+	\item \textbf{Euklidischer Standardraum}: \( = (\R^n, \langle \cdot, \cdot \rangle) \)
+	\item \textbf{Norm}: \( = ||v|| = \sqrt{\langle v,v \rangle} \)
+	\item \textbf{Abstand}: \( = \text{d}(v,w) = ||v-w|| \)
 	\item Rechenregeln:
-		\begin{enumeration}
-			\item \textbf{Dreiecksungleichung}: \( \langle v,v \rangle^2 \leq \langle v,v \rangle * \langle w,w \rangle \)
+		\begin{enumerate}
+			\item \emph{Dreiecksungleichung}: \( \langle v,v \rangle^2 \leq \langle v,v \rangle * \langle w,w \rangle \)
 				\\*
 				wenn \( = \), dann \( v,w \) lin. abh.
-			\item \textbf{Cauchy-Schwartzsche Ungleichung} \\* \( ||u-v|| \leq ||u-w||+||w-v|| \)
-		\end{enumeration}
+			\item \emph{Cauchy-Schwartzsche Ungleichung} \\* \( ||u-v|| \leq ||u-w||+||w-v|| \)
+		\end{enumerate}
 
-	\item \underline{Normierter VR}: \( = (V,N) \), \( N: V \to \R \) mit
-		\begin{enumeration}
+	\item \textbf{Normierter VR}: \( = (V,N) \), \( N: V \to \R \) mit
+		\begin{enumerate}
 			\item \( \forall \ 0 \neq v \in V : N(v) > 0 \)
 			\item \( N(\alpha v) = |\alpha|N(v) \) (\( \alpha \in \R \))
 			\item \( N(v)+N(w) \geq N(v+w) \)
-		\end{enumeration}
-	\item \underline{Metrischer VR}: \( =(M,d) \), \( d: M \times M \to \R \) mit
-		\begin{enumeration}
-			\item \textbf{Symmetrie}: \( d(m,n) = d(n,m) \)
-			\item \textbf{Positivität}: \( d(m,n) \geq 0 \wedge (d(m,n) = 0 \Leftrightarrow m = n) \)
-			\item \textbf{Dreiecksugl.}: \( d(m,0) \leq d(m,n) + d(n,0) \)
-		\end{enumeration}
+		\end{enumerate}
+	\item \textbf{Metrischer VR}: \( =(M,d) \), \( d: M \times M \to \R \) mit
+		\begin{enumerate}
+			\item \emph{Symmetrie}: \( d(m,n) = d(n,m) \)
+			\item \emph{Positivität}: \( d(m,n) \geq 0 \wedge (d(m,n) = 0 \Leftrightarrow m = n) \)
+			\item \emph{Dreiecksugl.}: \( d(m,0) \leq d(m,n) + d(n,0) \)
+		\end{enumerate}
 		\( (V, N) \) normierter VR \( \leadsto d_N(v,w) = N(v-w) \) Metrik
 
-	\item \underline{Winkel}: \( \angle(v,w) = \alpha \in [0,\pi]: \cos(\alpha) = \tfrac{\langle v,w \rangle}{||v||*||w||} \)
-	\item \underline{Orthogonalität}: \( v,w \) orthogonal \( \Leftrightarrow \langle v,w \rangle = 0 \leadsto v \perp w \)
-	\item \underline{Pythagoras}: \( v \perp w \Leftrightarrow ||v||^2 + ||w||^2 = ||v+w||^2 \)
-\end{items}
+	\item \textbf{Winkel}: \( \angle(v,w) = \alpha \in [0,\pi]: \cos(\alpha) = \tfrac{\langle v,w \rangle}{||v||*||w||} \)
+	\item \textbf{Orthogonalität}: \( v,w \) orthogonal \( \Leftrightarrow \langle v,w \rangle = 0 \leadsto v \perp w \)
+	\item \textbf{Pythagoras}: \( v \perp w \Leftrightarrow ||v||^2 + ||w||^2 = ||v+w||^2 \)
+\end{itemize}
 
-\textbf{Orthonormalbasen}:
-\begin{items}
-	\item \underline{Orthogonalsystem}: \( = S \subseteq V \) (eukl. VR): \( 0 \not \in S \wedge s, s' \in S: s \perp s' \)
-	\item \underline{Orthonormalsystem}: \( = \text{OGS} \) mit \( \forall s \in \text{OGS}: ||s|| = 1 \)
+\paragraph{Orthonormalbasen}
+\begin{itemize}
+	\item \textbf{Orthogonalsystem}: \( = S \subseteq V \) (eukl. VR): \( 0 \not \in S \wedge s, s' \in S: s \perp s' \)
+	\item \textbf{Orthonormalsystem}: \( = \text{OGS} \) mit \( \forall s \in \text{OGS}: ||s|| = 1 \)
 		\\*
 		\( \leadsto \) OGS und ONS sind lin. unabh.
-	\item \underline{Orthogonalbasis}: \( = S \subseteq V: \langle S \rangle = V \wedge S \text{ ist OGS} \)
-	\item \underline{Orthonormalbasis}: \( = S \subseteq V: \langle S \rangle = V \wedge S \text{ ist ONS} \)
-	\item \underline{Fourierformel}: \( V \) eukl. VR, \( B = \{ b_1, \dots, b_n \} \) V-ONB
+	\item \textbf{Orthogonalbasis}: \( = S \subseteq V: \langle S \rangle = V \wedge S \text{ ist OGS} \)
+	\item \textbf{Orthonormalbasis}: \( = S \subseteq V: \langle S \rangle = V \wedge S \text{ ist ONS} \)
+	\item \textbf{Fourierformel}: \( V \) eukl. VR, \( B = \{ b_1, \dots, b_n \} \) V-ONB
 		\\*
 		\( \leadsto V \ni v = \sum_{i=1}^n \langle v,b_i \rangle b_i \)
 		\\*
 		\( \leadsto D_B(v) = (\langle v, b_i \rangle)_{1 \leq i \leq n} \in \R^n \)
 		\\*
 		\( \leadsto \langle v,w \rangle = D_B(v)^\top D_B(w) \)
-	\item \underline{Orthogonale Matrix}: \( = A \in \R^{n \times n}: A^\top A = I_n \)
+	\item \textbf{Orthogonale Matrix}: \( = A \in \R^{n \times n}: A^\top A = I_n \)
 		\\*
 		\( \{ v_1, \dots, v_n \} \) ONB \( \Rightarrow A = (v_1, \dots, v_n) \) OGM
-	\item \underline{Orthogonale Gruppe}: \( = O(n) \\* = \{ A \in \R^{n \times n} \mid A^\top A = I_n \} \subseteq \gl_n(\R) \)
+	\item \textbf{Orthogonale Gruppe}: \( = O(n) \\* = \{ A \in \R^{n \times n} \mid A^\top A = I_n \} \subseteq \gl_n(\R) \)
 		\\* \( \leadsto \det(A^\top A) = \det(I_n) = 1 \Rightarrow \det(A) = \pm 1 \)
-	\item \underline{Spezielle orthogonale Gruppe}: \( = SO(n) \\* =\{ A \in O(n) \mid \det(A) = 1 \} \)
+	\item \textbf{Spezielle orthogonale Gruppe}: \( = SO(n) \\* =\{ A \in O(n) \mid \det(A) = 1 \} \)
 
-	\item \underline{Orthogonalisierung}: \( \{ v_1, \dots, v_n \} \) Basis von eukl. VR \( V \\* \leadsto S = \{ w_1, \dots, w_n \} \) OGB mit:
-		\begin{enumeration}
+	\item \textbf{Orthogonalisierung}: \( \{ v_1, \dots, v_n \} \) Basis von eukl. VR \( V \\* \leadsto S = \{ w_1, \dots, w_n \} \) OGB mit:
+		\begin{enumerate}
 			\item \( w_1 = v_1 \)
 			\item \( w_l = v_l - \sum_{i=1}^{l-1}\left( \tfrac{\langle v_l, w_i \rangle}{\langle w_i, w_i \rangle}w_i \right) \) (\( l = 1, \dots, n \))
-		\end{enumeration}
+		\end{enumerate}
 		\( \leadsto \widetilde{S} := \{ \tfrac{w_1}{||w_1||}, \dots, \tfrac{w_n}{||w_n||} \} \) ist ONB
 
-	\item \underline{Iwasawa-Zerlegung}: \( \gl_n(\R) = O(n)*\mathcal{B}(n) \) \\* (\( \mathcal{B}(n) = \) \{obere \( n \times n-\triangle\)-Matrizen mit pos. Diagonaleinträgen\})
+	\item \textbf{Iwasawa-Zerlegung}: \( \gl_n(\R) = O(n)*\mathcal{B}(n) \) \\* (\( \mathcal{B}(n) = \) \{obere \( n \times n-\triangle\)-Matrizen mit pos. Diagonaleinträgen\})
 
-	\item \underline{Orthogonale Polynome}: Eukl. VR \( \R[X]_{\text{Grad} \leq n} \) mit SKP
+	\item \textbf{Orthogonale Polynome}: Eukl. VR \( \R[X]_{\text{Grad} \leq n} \) mit SKP
 		\\*
 		\( \leadsto \) ONB bauen aus \( \{ 1, x, \dots, x_n \} \)
 		\\*
 		\( \leadsto \) orthogonale Polynome
-	\item \underline{Positiv definit}: \( F = (f_{i,j}) \in \R^{n \times n} \) symmetrisch. Dann äquivalent:
-		\begin{enumeration}
+	\item \textbf{Positiv definit}: \( F = (f_{i,j}) \in \R^{n \times n} \) symmetrisch. Dann äquivalent:
+		\begin{enumerate}
 			\item \( F \) positiv definit
 			\item \( \exists \ A \in \gl_n(\R) \) (obere \( \triangle \)-Matrix) \( : F = A^\top A \)
 			\item \( \forall \ 1 \leq k \leq n: \det((f_{i,j})_{1 \leq i,j \leq k}) > 0 \)
-		\end{enumeration}
-		3.-1.: \textbf{Hurwitz-Kriterium}
+		\end{enumerate}
+		3.-1.: \emph{Hurwitz-Kriterium}
 
-	\item \underline{Hauptminoren}: Matrizen aus Bedingung v. Hurwitzkriterium
-	\item \underline{Minoren}: Determinanten der Matrizen, die durch Streichen von Zeilen/Spalten von \( A \) entstehen
-\end{items}
+	\item \textbf{Hauptminoren}: Matrizen aus Bedingung v. Hurwitzkriterium
+	\item \textbf{Minoren}: Determinanten der Matrizen, die durch Streichen von Zeilen/Spalten von \( A \) entstehen
+\end{itemize}
 
-\newpage
-
-\textbf{Orthogonale Komplemente, Abstände}
-\begin{items}
-	\item \underline{Orthogonalraum}: \( M \subseteq V \) (eukl. VR) \\* \( \leadsto M^\perp = \{ v \in V \mid \forall m \in M: m \perp v \} \\* \phantom{xx  x xx\ } = \{ v \in V \mid \forall m \in M: \langle v,m \rangle = 0 \} \) 
+\paragraph{Orthogonale Komplemente, Abstände}
+\begin{itemize}
+	\item \textbf{Orthogonalraum}: \( M \subseteq V \) (eukl. VR) \\* \( \leadsto M^\perp = \{ v \in V \mid \forall m \in M: m \perp v \} \\* \phantom{xx  x xx\ } = \{ v \in V \mid \forall m \in M: \langle v,m \rangle = 0 \} \) 
 		\\*
 		\( \leadsto N \subseteq M \Rightarrow M^\perp \subseteq N^\perp, M^\perp = \langle M \rangle^\perp \)
-	\item \underline{Orthogonales Komplement}: \( U \leq V \) (eukl. VR) \\* \( \leadsto U^\perp \) orthogonales Komplement zu \( U \) \\* \( V = U \oplus U^\perp \)
-	\item \underline{Orthogonale Projektion}: \( u \in U, u' \in U^\perp. \\* \Pi_U: V \ni (u+u') \mapsto u \in U \) orthogonale Projektion \\* (von \( V \) auf \( U \) längs \( U^\perp \))
-	\item \underline{Abstand}: \( \text{d}(A,B) = \inf(\{ \text{d}(a,b) \mid a \in A, b \in B \}) \)
+	\item \textbf{Orthogonales Komplement}: \( U \leq V \) (eukl. VR) \\* \( \leadsto U^\perp \) orthogonales Komplement zu \( U \) \\* \( V = U \oplus U^\perp \)
+	\item \textbf{Orthogonale Projektion}: \( u \in U, u' \in U^\perp. \\* \Pi_U: V \ni (u+u') \mapsto u \in U \) orthogonale Projektion \\* (von \( V \) auf \( U \) längs \( U^\perp \))
+	\item \textbf{Abstand}: \( \text{d}(A,B) = \inf(\{ \text{d}(a,b) \mid a \in A, b \in B \}) \)
 		\\*
 		Abstand von \( A \) und \( B \) (\( \varnothing \neq A,B \subseteq V \))
 		\\*
 		\( \leadsto \text{d}(a,B) = \text{d}(\{ a \}, B) \)
-	\item \underline{Abstand UVRe}: \( U,W \subseteq V \) (eukl. VR)
-		\begin{enumeration}
+	\item \textbf{Abstand UVRe}: \( U,W \subseteq V \) (eukl. VR)
+		\begin{enumerate}
 			\item \( \forall a \in V: \text{d}(a,U) = || \Pi_{U^\perp}(a) || \)
 			\item \( \forall A \subseteq V: \text{d}(A,U) = || \Pi_{U^\perp}(A),0) || \)
 			\item \( \text{d}(v+W, U) = || \Pi_{(U+W)^\perp}(v) || \)
-		\end{enumeration}
+		\end{enumerate}
 
-	\item \underline{Affiner Teilraum}: \( = v+W \) (\( W \leq V, v \in V \))
-	\item \underline{Affine Gerade} (durch \( a,b \in V \)): \( = \overline{a,b} = \{ \lambda a + (1-\lambda)b \mid \lambda \in K \} \) \\* (\( = a + K(b-a) \))
-	\item \underline{Strecke}: \( = [a,b] = \{ \lambda a + (1 - \lambda)b \mid 0 \leq \lambda \leq 1 \} \) \\* (zwischen \( a,b \in V \), \( K = \R \))
-	\item \underline{Lot}: \( = [u,v-w] \) Lot zwischen \( U \) und \( v+W \) \\* (Lotfußpunkte \( u \in U \), \( v-w \in V+W \))
-\end{items}
+	\item \textbf{Affiner Teilraum}: \( = v+W \) (\( W \leq V, v \in V \))
+	\item \textbf{Affine Gerade} (durch \( a,b \in V \)): \( = \overline{a,b} = \{ \lambda a + (1-\lambda)b \mid \lambda \in K \} \) \\* (\( = a + K(b-a) \))
+	\item \textbf{Strecke}: \( = [a,b] = \{ \lambda a + (1 - \lambda)b \mid 0 \leq \lambda \leq 1 \} \) \\* (zwischen \( a,b \in V \), \( K = \R \))
+	\item \textbf{Lot}: \( = [u,v-w] \) Lot zwischen \( U \) und \( v+W \) \\* (Lotfußpunkte \( u \in U \), \( v-w \in V+W \))
+\end{itemize}

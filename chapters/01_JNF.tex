@@ -1,55 +1,55 @@
 \section{\label{sec:JNF}Normalform für Endomorphismen}
 
-\textbf{Polynomring}:
-\begin{items}
-	\item \underline{Teiler}: $f \in K[X]$ Teiler von $g \in K[X] \Leftrightarrow \exists h \in K[X]: g=f*h$
-	\item \underline{Teilerfremdheit}: $f,g$ teilerfremd $\Leftrightarrow \forall h \in K[X], h$ teilt $g, f: \\* 0 \neq h \in K$ ($h$ konstant)
-	\item \underline{Irreduzibel}: $f \neq 0$ irreduzibel $\Leftrightarrow \forall h \in K[X], h$ teilt $f: \\* h \in K \vee \exists a \in K: h = a^{-1}f$ (da dann $f=ah$)
-	\item \underline{Polynomdivision}: $f,g \in K[X], g \neq 0 \Rightarrow \exists h,r \in K[X]: \\* f=gh+r \wedge \text{Grad}(r) < \text{Grad}(g)$
-	\item \underline{\textsc{Euklid}ischer Algorithmus}: $\text{Grad}(f_0) \geq \text{Grad}(f_1), f_1 \neq 0$.
-      \begin{enumeration}
+\paragraph{Polynomring}
+\begin{itemize}
+	\item \textbf{Teiler}: $f \in K[X]$ Teiler von $g \in K[X] \Leftrightarrow \exists h \in K[X]: g=f*h$
+	\item \textbf{Teilerfremdheit}: $f,g$ teilerfremd $\Leftrightarrow \forall h \in K[X], h$ teilt $g, f: \\* 0 \neq h \in K$ ($h$ konstant)
+	\item \textbf{Irreduzibel}: $f \neq 0$ irreduzibel $\Leftrightarrow \forall h \in K[X], h$ teilt $f: \\* h \in K \vee \exists a \in K: h = a^{-1}f$ (da dann $f=ah$)
+	\item \textbf{Polynomdivision}: $f,g \in K[X], g \neq 0 \Rightarrow \exists h,r \in K[X]: \\* f=gh+r \wedge \text{Grad}(r) < \text{Grad}(g)$
+	\item \textbf{\textsc{Euklid}ischer Algorithmus}: $\text{Grad}(f_0) \geq \text{Grad}(f_1), f_1 \neq 0$.
+      \begin{enumerate}
         \item $f_0=h_1f_1+f_2\ (\text{Grad}(f_2)\geq\text{ Grad}(f_1))$ \\
-          \textbf{F1}: $f_2=0$ Fertig. \\
-          \textbf{F2}: $f_2 \neq 0: f_{i-1} = h_if_i+f_{i+1}$. Rekursion.
+          \emph{F1}: $f_2=0$ Fertig. \\
+          \emph{F2}: $f_2 \neq 0: f_{i-1} = h_if_i+f_{i+1}$. Rekursion.
         \item $f_{i+1}=0 \Rightarrow f_i \text{ teilt } f_{i-1}, \dots, f_1, f_0 \\* \leadsto f_i$ größter gemeinsamer Teiler von $f,g \\* \leadsto f,g$ teilerfremd $\Rightarrow \exists k,l \in K[X]: 1=k*f+l*g$.
-      \end{enumeration}
+      \end{enumerate}
   	\item $\varphi \in \text{End}(V), C \in K[X], C(\varphi)=0, C=f*g, \ f,g$ teilerfremd \\* $\Rightarrow V=\text{Kern}(f(\varphi))\oplus \text{ Kern}(g(\varphi))$.
-\end{items}
+\end{itemize}
 
-\textbf{Haupträume}:
-\begin{items}
-  \item \underline{Hauptraum}: $\varphi \in \text{End}(V), \lambda \in K \leadsto H(\varphi, \lambda) \\* = \text{Kern}((\varphi - \lambda \text{Id}_V)^{\mu_a(\varphi, \lambda)})$ Hauptraum von $\varphi$ zu $\lambda, H(\varphi, \lambda) \leq V \\* \lambda \in \text{spec}(\varphi) \Leftrightarrow H(\varphi, \lambda) \neq \{ 0 \} \\* \leadsto \text{dim}(H(\varphi, \lambda)) = \mu_a(\varphi, \lambda)$
+\paragraph{Haupträume}
+\begin{itemize}
+  \item \textbf{Hauptraum}: $\varphi \in \text{End}(V), \lambda \in K \leadsto H(\varphi, \lambda) \\* = \text{Kern}((\varphi - \lambda \text{Id}_V)^{\mu_a(\varphi, \lambda)})$ Hauptraum von $\varphi$ zu $\lambda, H(\varphi, \lambda) \leq V \\* \lambda \in \text{spec}(\varphi) \Leftrightarrow H(\varphi, \lambda) \neq \{ 0 \} \\* \leadsto \text{dim}(H(\varphi, \lambda)) = \mu_a(\varphi, \lambda)$
   \item Direkte Summe: $V$ endl.-dim. K-VR, $\varphi \in \text{End}(V), \lambda_1,\dots,\lambda_k \in K (\lambda_i \neq \lambda_j) \\* \leadsto \sum_{i=1}^k H(\varphi, \lambda_i) = \bigoplus_{i=1}^k H(\varphi, \lambda)$
   \item Äquivalent:
-  \begin{enumeration}
+  \begin{enumerate}
     \item $V = \bigoplus_{\lambda \in \text{spec}(\varphi)} H(\varphi, \lambda)$
     \item $\text{CP}_\varphi(X)=\prod_{\lambda \in \text{spec}(\varphi)} (X - \lambda)^{\text{dim}(H(\varphi, \lambda))}$
-  \end{enumeration}
-\end{items}
+  \end{enumerate}
+\end{itemize}
 
-\textbf{Nilpotente Endomorphismen}:
-\begin{items}
+\paragraph{Nilpotente Endomorphismen}
+\begin{itemize}
   \item \( = \Phi \in \text{End}(V) \exists n \in \N: \Phi^n = 0 \) (\( \leadsto V = \kr(\Phi^n) \))
   \item \( \Phi \) nilpotent \( \Rightarrow \) \( V \) direkte Summe von zyklischen UVR
-\end{items}
+\end{itemize}
 
-\textbf{Jordansche Normalform}:
-\begin{items}
-  \item \underline{Jordankästchen}: \\* \( = \left( \begin{smallmatrix}
+\paragraph{Jordansche Normalform}
+\begin{itemize}
+  \item \textbf{Jordankästchen}: \\* \( = \left( \begin{smallmatrix}
     \lambda &  &  &  \\
     1 & \ddots &  &  \\
      & \ddots & \ddots &  \\
       & & 1 & \lambda
   \end{smallmatrix} \right) = J_d(\lambda) \in K^{d \times d} \) (Länge \( d \), Eigenwert \( \lambda \))
 
-  \item \underline{Jordanblock} (zu EW \( \lambda_i \) -- ggf. \( d_{j,i} = d_{j+1,i} \)): \\*
+  \item \textbf{Jordanblock} (zu EW \( \lambda_i \) -- ggf. \( d_{j,i} = d_{j+1,i} \)): \\*
     \( = \left( \begin{smallmatrix}
       J_{d_{1,i}}(\lambda) & &  \\
        & \ddots & \\
         & & J_{d_{k,i}}(\lambda)
     \end{smallmatrix} \right) = D_i \in K^{\mu_a(\Phi, \lambda_i) \times \mu_a(\Phi, \lambda_i) } \)
 
-  \item \underline{JNF}: \( V \) endl.-dim. \( K \)-VR, \( \Phi \in \text{End}(V) \) zerfalle in Linearfaktoren, \( \spec(\Phi) = \{ \lambda_1, \dots, \lambda_l \} \)
+  \item \textbf{JNF}: \( V \) endl.-dim. \( K \)-VR, \( \Phi \in \text{End}(V) \) zerfalle in Linearfaktoren, \( \spec(\Phi) = \{ \lambda_1, \dots, \lambda_l \} \)
     \\*
     \( \Rightarrow \forall \lambda_i \in \spec(\Phi) \exists k_i, d_{1,i}, ..., d_{k_i,i} \in \N, d_{1,i} \geq \cdots \geq d_{k_i,i} \geq 1 \): 
     \\*
@@ -59,16 +59,14 @@
         & & D_l
     \end{smallmatrix} \right) \) (mit Basis \( B \) von \( V \))
 
-  \item \underline{JNF-Eigenschaften} (für EW \( \lambda \)): \\*
-    \textbf{Länge JB}: \( \mu_a(\Phi, \lambda) \) \\*
-    \textbf{Anzahl JK}: \( \mu_g(\Phi, \lambda) \) \\*
-    \textbf{Länge längstes JK}:  \\* \phantom{x} \( \min\{ e \in \N \mid \kr((\Phi - \lambda I_n)^e) = \kr((\Phi - \lambda I_n)^{e+1}) \}  \) \\*
-    \textbf{Anzahl JK Größe \( i \)}: \( 2\dim(\kr((\Phi - \lambda I_n)^i)) \\* \phantom{x} - \dim(\kr((\Phi - \lambda I_n)^{i-1})) - \dim(\kr((\Phi - \lambda I_n)^{i+1})) \)
+  \item \textbf{JNF-Eigenschaften} (für EW \( \lambda \)): \\*
+    \emph{Länge JB}: \( \mu_a(\Phi, \lambda) \) \\*
+    \emph{Anzahl JK}: \( \mu_g(\Phi, \lambda) \) \\*
+    \emph{Länge längstes JK}:  \\* \phantom{x} \( \min\{ e \in \N \mid \kr((\Phi - \lambda I_n)^e) = \kr((\Phi - \lambda I_n)^{e+1}) \}  \) \\*
+    \emph{Anzahl JK Größe \( i \)}: \( 2\dim(\kr((\Phi - \lambda I_n)^i)) \\* \phantom{x} - \dim(\kr((\Phi - \lambda I_n)^{i-1})) - \dim(\kr((\Phi - \lambda I_n)^{i+1})) \)
 
-    \newpage
-
-  \item \underline{Transformationsmatrix}: \( = S \in K^{n \times n} : S^{-1}AS = A' \) JNF
-    \begin{enumeration}
+  \item \textbf{Transformationsmatrix}: \( = S \in K^{n \times n} : S^{-1}AS = A' \) JNF
+    \begin{enumerate}
       \item \( \forall \lambda \in \spec(\Phi) \): Bestimme Basisvektoren für 
         \\*
         \( \kr(\Phi - \lambda I_n) \), \( \kr((\Phi - \lambda I_n)^2) \), \dots
@@ -76,11 +74,9 @@
         bis Dimension sich nicht mehr ändert \\* (\( := p \cong \) Länge längstes JK)
       \item Bestimme die Basisvektoren von \( \kr((\Phi - \lambda I_n)^p) \), die nicht in \( \kr((\Phi - \lambda I_n)^{p-1}) \) liegen (\( =: v_1, \dots \))
       \item Füge \( v_1, (\Phi - \lambda I_n)v_1, (\Phi-\lambda I_n)^2v_1, \dots, v_2, (\Phi - \lambda I_n)v_2, \dots \) \( S \) hinzu (Potenzen bis \( p \)) \\*
-        \textbf{Achtung}: Zu JK mit Länge \( k \) gehören Basisvektoren aus \\* \phantom{x} \( \kr((\Phi - \lambda I_n)^k) \)!
+        \emph{Achtung}: Zu JK mit Länge \( k \) gehören Basisvektoren aus \\* \phantom{x} \( \kr((\Phi - \lambda I_n)^k) \)!
       \item Wiederhole 2.-3. für \( p-1 \) (Potenzen dann nur bis \( p-1 \))
       \item Angekommen bei \( \kr(\Phi - \lambda I_n) \): Ggf. \( S \) um zu \( S \) lin. unabh. Vektoren aus \( \kr(\Phi - \lambda I_n) \) ergänzen
       \item 2.-5. für alle \( \lambda \in \spec(\Phi) \) durchführen
-    \end{enumeration}
-
-    
-\end{items}
+    \end{enumerate}
+\end{itemize}

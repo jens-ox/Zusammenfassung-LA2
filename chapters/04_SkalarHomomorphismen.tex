@@ -1,15 +1,15 @@
-\section{\label{sec:skalarhomo}Skalarprodukte und Homomorphismen}
+\section{\label{sec:skalarhomo}SKP \& Homomorphismen}
 
-\textbf{Isometrien}
-\begin{items}
-	\item \underline{Isometrie}: \( = f: (M,d) \to (N,e) \ \), \( e(f(x),f(y)) = d(x,y) \)
-	\item \underline{Isometriegruppe}: \( =\text{Iso}(M,d) \\* = \{ f: M \to M \mid f \text{ ist symmetrische Isometrie} \} \) 
-	\item \underline{lineare Isometrie}: \( = \Phi: V \to W : \Phi \in \text{Abb}(V,W) \wedge \Phi \) ist Isometrie
-	\item \underline{Polarisierungsformel}: SKP aus Metrik: \\* \( \langle x,y \rangle = \tfrac{1}{4}(\langle x+y,x+y \rangle - \langle x-y,x-y \rangle) \)
+\paragraph{Isometrien}
+\begin{itemize}
+	\item \textbf{Isometrie}: \( = f: (M,d) \to (N,e) \ \), \( e(f(x),f(y)) = d(x,y) \)
+	\item \textbf{Isometriegruppe}: \( =\text{Iso}(M,d) \\* = \{ f: M \to M \mid f \text{ ist symmetrische Isometrie} \} \) 
+	\item \textbf{lineare Isometrie}: \( = \Phi: V \to W : \Phi \in \text{Abb}(V,W) \wedge \Phi \) ist Isometrie
+	\item \textbf{Polarisierungsformel}: SKP aus Metrik: \\* \( \langle x,y \rangle = \tfrac{1}{4}(\langle x+y,x+y \rangle - \langle x-y,x-y \rangle) \)
 		\\*
 		\( \leadsto \Phi \) ist lin. Iso \( \Leftrightarrow \langle x,y \rangle_V = \langle \Phi(x),\Phi(y) \rangle_W \)
-	\item \underline{Koordinatenabb.}: \( B \) \( V \)-ONB \( \leadsto D_B: V \to \R^{\dim(V)} \) lin. Iso.
-	\item \underline{Drehkästchen}: \( \Phi \in \text{Aut}((\R^2),\langle \cdot, \cdot \rangle) \) lin. Iso. \\* \( \leadsto \) Beschreibung bzgl. Standardbasis \( S \): \( D_{SS}(\Phi) = \left( \begin{smallmatrix}
+	\item \textbf{Koordinatenabb.}: \( B \) \( V \)-ONB \( \leadsto D_B: V \to \R^{\dim(V)} \) lin. Iso.
+	\item \textbf{Drehkästchen}: \( \Phi \in \text{Aut}((\R^2),\langle \cdot, \cdot \rangle) \) lin. Iso. \\* \( \leadsto \) Beschreibung bzgl. Standardbasis \( S \): \( D_{SS}(\Phi) = \left( \begin{smallmatrix}
 			a & b \\
 			c & d
 		\end{smallmatrix} \right) \)
@@ -26,7 +26,7 @@
 			\cos(\varphi) & \sin(\varphi) \\
 			\sin(\varphi) & -\cos(\varphi)
 		\end{smallmatrix} \right) \) Drehkästchen zu Winkel \( \varphi \)
-	\item \underline{Kriterium lin. Iso.}: \( \mathbb{K} \in \{ \R, \C \} \), \( V,W \) eukl. \( \mathbb{K} \)-VR, \( \Phi \in \abb(V,W) \)
+	\item \textbf{Kriterium lin. Iso.}: \( \mathbb{K} \in \{ \R, \C \} \), \( V,W \) eukl. \( \mathbb{K} \)-VR, \( \Phi \in \abb(V,W) \)
 		\\*
 		\( \leadsto \Phi \in \iso(V,W) \Leftrightarrow \forall V \)-ONB injektiv auf \( W \)-ONB abgebildet
 		\\*
@@ -34,39 +34,37 @@
 		\\*
 		\phantom{xx} \( \leadsto \Phi \in \iso(V,W) \Leftrightarrow D_{BB}(\Phi) \) ist orthogonal/unitär
 
-	\item \underline{Eigentliche Bewegung}: \( = \) lineare Isometrie mit Determinante \( 1 \)
+	\item \textbf{Eigentliche Bewegung}: \( = \) lineare Isometrie mit Determinante \( 1 \)
 
-	\item \underline{Häufigkeit lin. Iso.}: \( \Phi \in \iso(V) \Rightarrow \exists \delta \in V \), lin. Iso. \( \Phi_0 \forall v \in V: \Phi(v) = \Phi_0(v)+\delta \)
+	\item \textbf{Häufigkeit lin. Iso.}: \( \Phi \in \iso(V) \Rightarrow \exists \delta \in V \), lin. Iso. \( \Phi_0 \forall v \in V: \Phi(v) = \Phi_0(v)+\delta \)
 
-	\item \underline{Darstellung Iso.}: Jede \( V \)-\( W \)-Isometrie kann als lineare \( V \)-\( W \)-Isometrie mit \( W \)-Translation dargestellt werden
+	\item \textbf{Darstellung Iso.}: Jede \( V \)-\( W \)-Isometrie kann als lineare \( V \)-\( W \)-Isometrie mit \( W \)-Translation dargestellt werden
 
-	\item \underline{Spiegelung}: \( = \sigma_v: V \ni x \mapsto x-2\tfrac{\langle x,v \rangle}{\langle v,v \rangle}v \in V \)
+	\item \textbf{Spiegelung}: \( = \sigma_v: V \ni x \mapsto x-2\tfrac{\langle x,v \rangle}{\langle v,v \rangle}v \in V \)
 		\\*
 		(Spiegelung an Hyperebene \( v^\perp, 0 \neq v \in V \))
 		\\*
 		Jede lin. Iso. ist Produkt von höchstens \( \dim(V) \) Spiegelungen
 
-	\item \underline{Iso. + inv. Komplement}: \( \Phi \in \iso(V) \), \( U \leq V \) \( \Phi \)-invariant
+	\item \textbf{Iso. + inv. Komplement}: \( \Phi \in \iso(V) \), \( U \leq V \) \( \Phi \)-invariant
 		\\*
 		\( \Rightarrow U^\perp \) \( \Phi \)-invariant
 
-	\item \underline{Eigenwerte}: \( \mathbb{K} \in \{ \R, \C \} \), \( V \) eukl. \( \mathbb{K} \)-VR
-		\begin{enumeration}
+	\item \textbf{Eigenwerte}: \( \mathbb{K} \in \{ \R, \C \} \), \( V \) eukl. \( \mathbb{K} \)-VR
+		\begin{enumerate}
 			\item \( \Phi \in \iso(V) \) linear \( \Rightarrow \forall \lambda \in \spec(\Phi): |\lambda| = 1 \) 
 			\item \( \alpha \in K, |\alpha| = 1, V \neq \{ 0 \} \Rightarrow \exists \ \Phi \in \iso(V): \alpha \in \spec(\Phi) \)
-		\end{enumeration}
+		\end{enumerate}
 
-	\item \underline{Isometrienormalform}: \( \Phi \in \iso(V) \) linear:
-		\begin{enumeration}
+	\item \textbf{Isometrienormalform}: \( \Phi \in \iso(V) \) linear:
+		\begin{enumerate}
 			\item \( V \) hat ONB aus EV (\( \cong \Phi \) orthogonal diagonalisierbar)
 			\item \( V =  \) direkte \( \sum \) zueinander orthogonaler \( \Phi \)-inv., \\* ein-/zweidim. UVR
 				\\*
 				\( \leadsto \) \( \Phi \) wirkt auf \( 2 \)-dim. Summanden als Drehung
-		\end{enumeration}
+		\end{enumerate}
 
-	\newpage
-
-	\item \underline{Iso-NF: Matrizen}: \( n \in \N_0 \), \( A \in O(n) \\* \Rightarrow \exists \ \phi_1, \dots, \phi_l \in (0,\pi), \ S \in O(n): \)
+	\item \textbf{Iso-NF: Matrizen}: \( n \in \N_0 \), \( A \in O(n) \\* \Rightarrow \exists \ \phi_1, \dots, \phi_l \in (0,\pi), \ S \in O(n): \)
 		\\*
 		\( S^{-1}AS = \left( \begin{smallmatrix}
 			I_{d_+} & & & &  \\
@@ -77,52 +75,52 @@
 		\end{smallmatrix} \right) \)
 		\\*
 		(\( d_+ \): \( \dim(\eig(A,1)) \), \( d_- \): \( \dim(\eig(A,-1)) \), \( l \): \( \tfrac{1}{2}(n-d_+-d_-) \))
-	\item \underline{Klausurmatrizen}: Es sei \( B := A + A^\top  \).
-		\begin{enumeration}
+	\item \textbf{Klausurmatrizen}: Es sei \( B := A + A^\top  \).
+		\begin{enumerate}
 			\item Bestimme \( \cp_B(\lambda) \)
 			\item \( \mu_a(B,2) = \# \) \( 1 \)er in Iso-NF
 			\item \( \mu_a(B,-2) = \# \) \( -1 \)er in Iso-NF
 			\item Restliche \( \lambda_i \in \spec(B) \): Drehkästchen \\* (mit \( \cos(\lambda_i) = \tfrac{\lambda_i}{2} \), \( \sin(\lambda_i) = \sqrt{1-\tfrac{\lambda_i^2}{4}} \))
-			\item \textbf{Transformationsmatrix}: Alle \( \eig(\lambda_i) \) berechnen, für jeden ER ONB aus EV berechnen (Gram-Schmmidt)
-		\end{enumeration}
-\end{items}
+			\item \emph{Transformationsmatrix}: Alle \( \eig(\lambda_i) \) berechnen, für jeden ER ONB aus EV berechnen (Gram-Schmmidt)
+		\end{enumerate}
+\end{itemize}
 
-\textbf{Selbstadjungierte Endomorphismen}
-\begin{items}
+\paragraph{Selbstadjungierte Endomorphismen}
+\begin{itemize}
 	\item \( = \Phi \in \text{End}(V) \forall v,w \in V: \langle v, \Phi(w) \rangle = \langle \Phi(v),w \rangle \)
 		\\*
 		\( \leadsto \Phi \) selbstadjungiert \( \Leftrightarrow D_{BB}(\Phi) = \overline{D_{BB}(\Phi)^\top } \) (ONB \( B \))
-	\item \underline{Eigenwerte}: \( \Phi \in \text{End}(V) \) selbstadjungiert. Dann:
-		\begin{enumeration}
+	\item \textbf{Eigenwerte}: \( \Phi \in \text{End}(V) \) selbstadjungiert. Dann:
+		\begin{enumerate}
 			\item \( \forall \lambda \in \spec(\Phi): \lambda \in \R \) 
 			\item \( \forall U \leq V \) \( \Phi \)-inv.: \( U^\perp \) \( \Phi \)-inv.
-		\end{enumeration}
-	\item \underline{Spektralsatz}: \( \{ 0 \} \neq V \) endl.-dim. eukl. VR, \( \Phi \in \iso(V) \) selbstadj.
+		\end{enumerate}
+	\item \textbf{Spektralsatz}: \( \{ 0 \} \neq V \) endl.-dim. eukl. VR, \( \Phi \in \iso(V) \) selbstadj.
 		\\*
 		\( \Leftrightarrow V \) hat ONB aus \( \Phi \)-EV, \( \forall \lambda \in \spec(\Phi): \lambda \in \R \)
 		\\*
 		\( \leadsto A \in \R^{n \times n} \) symm. \( \Rightarrow \exists \ S \in O(n): S^{-1}AS \) Diagonalmatrix
 		\\*
 		\( \leadsto A \in \R^{n \times n} \) symm. positiv definit \( \Leftrightarrow \forall \lambda \in \spec(A): \lambda > 0 \)
-	\item \underline{Trägheitssatz}: \( P: V \times V \to \R \) symm. BLF. Dann:
-		\begin{enumeration}
+	\item \textbf{Trägheitssatz}: \( P: V \times V \to \R \) symm. BLF. Dann:
+		\begin{enumerate}
 			\item \( V = V_0 \oplus V_+ \oplus V_-  \) mit
-			\begin{enumeration}
+			\begin{enumerate}
 				\item \( P \) auf \( V_+ \) positiv definit
 				\item \( P \) auf \( V_- \) negativ definit
 				\item \( P \) auf \( V_0 \) konstant \( 0 \)
 				\item \( P(v_o, v_+) = P(v_0,v_-)=P(v_-,v_+)=0 \)
-			\end{enumeration}
+			\end{enumerate}
 			\item \( \dim(V_0), \dim(V_-), \dim(V_+) \) nur von \( P \) abhängig
-		\end{enumeration}
-\end{items}
+		\end{enumerate}
+\end{itemize}
 
-\textbf{Normale Endomorphismen}
-\begin{items}
-	\item \underline{Adjungiert}: \( \Phi: V \to W \) linear \( \leadsto \Phi^\ast: W \to V \) zu \( \Phi \) adjungiert
+\paragraph{Normale Endomorphismen}
+\begin{itemize}
+	\item \textbf{Adjungiert}: \( \Phi: V \to W \) linear \( \leadsto \Phi^\ast: W \to V \) zu \( \Phi \) adjungiert
 		\\*
 		\( \Leftrightarrow \forall v \in V, w \in W: \langle \Phi(v),w \rangle_W = \langle v,\Phi^\ast(w) \rangle_V \)
-	\item \underline{Normal}: \( V = W \) und \( \Phi^\ast \) ex. \( \Rightarrow \Phi \) normal, wenn \( \Phi \circ \Phi^\ast = \Phi^\ast \circ \Phi \)
+	\item \textbf{Normal}: \( V = W \) und \( \Phi^\ast \) ex. \( \Rightarrow \Phi \) normal, wenn \( \Phi \circ \Phi^\ast = \Phi^\ast \circ \Phi \)
 		\\*
 		(Matrizen: \( A \in \R^{n \times n} \) normal \( \Leftrightarrow AA^\top  = A^\top A \))
 		\\*
@@ -133,13 +131,13 @@
 		\( \leadsto D_{BC}(\Phi^\ast) = \left(D_{CB}(\Phi)\right)^\ast \) (ONB \( B,C \) von \( V,W \))
 		\\*
 		Blockdiagonalmatrix mit \( (1 \times 1) \)/\( (2 \times 2) \)-Matrizen ist normal
-	\item \underline{Invariante Komplemente}: \( \Phi \in \text{End}(V) \) normal, \( U \leq V \) \( \Phi \)-inv.
+	\item \textbf{Invariante Komplemente}: \( \Phi \in \text{End}(V) \) normal, \( U \leq V \) \( \Phi \)-inv.
 		\\*
 		\( \Rightarrow U^\perp \) \( \Phi \)-invariant
 		\\*
 		\( \leadsto \Phi|_U \in \text{End}(U) \) normal
-	\item \underline{Spektralsatz}: \( \Phi \in \text{End}(V) \) (V eukl. \( \mathbb{K} \)-VR) normal. Dann:
-		\begin{enumeration}
+	\item \textbf{Spektralsatz}: \( \Phi \in \text{End}(V) \) (V eukl. \( \mathbb{K} \)-VR) normal. Dann:
+		\begin{enumerate}
 			\item \( \mathbb{K}=\C \): es gibt eine ONB aus \( \Phi \)-EV
 				\\*
 				\( \leadsto A \in \C^{n \times n} \) normal \( \\* \phantom{xx} \Rightarrow \exists \ S \in U(n): S^{-1}AS \) Diagonalmatrix
@@ -149,5 +147,5 @@
 					a & -b \\
 					b & a
 				\end{smallmatrix} \right), b \neq 0 \))
-		\end{enumeration}
-\end{items}
+		\end{enumerate}
+\end{itemize}
